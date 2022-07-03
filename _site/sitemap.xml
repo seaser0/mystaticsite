@@ -6,6 +6,21 @@
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>http://0.0.0.0:4000</loc>
-	    <lastmod>2022-06-30T15:00:40-05:00</lastmod>
+	    <lastmod>2022-07-03T02:20:30-05:00</lastmod>
             <priority>1.00</priority>
-        </url></urlset>
+        </url><url>
+                <loc>http://0.0.0.0:4000/news/2022/06/30/update.html</loc>
+                <lastmod>2022-06-30T10:33:36-05:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
+                <loc>http://0.0.0.0:4000/resume</loc>
+                <lastmod>2022-06-30T10:33:36-05:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
+                <loc>http://0.0.0.0:4000/my-work</loc>
+                <lastmod>2022-06-30T10:33:36-05:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url></urlset>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Integrating razorpay into your webapp"
+title:  "Integrating razorpay into your app"
 date:   2019-03-23 21:03:36 +0530
 categories: Javascript NodeJS
 ---
@@ -20,6 +20,11 @@ rzp.capture(payment_id, cost)
 		return 2;
 	})
 ```
+List with posts:
+{% for post in site.posts %}
+	<li><a href="{{ post.url }}">{{ post.title}}</a></li>
+	{{ post.title }} <br>
+{% endfor %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
