@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "Ajax with Chart JS - Example 01",
+      "title-lower"    : "ajax with chart js - example 01",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Javascript",
+      "tags"     : "",
+      "url"      : "/chart-js-exampe01",
+      "date"     : "2022-07-10 10:33:36 -0500",
+      "content"     : "Chart JS		"
+    } ,
+  
+    {
       "title"    : "My update",
       "title-lower"    : "my update",
       "sub-titile" : "",
@@ -25,15 +37,15 @@
     } ,
   
     {
-      "title"    : "My work",
-      "title-lower"    : "my work",
+      "title"    : "Ajax with jQuery - Example 01",
+      "title-lower"    : "ajax with jquery - example 01",
       "sub-titile" : "",
       "sub-titile-lower" : "",
       "categories" : "Javascript",
       "tags"     : "",
-      "url"      : "/my-work",
+      "url"      : "/jquery-exampe01",
       "date"     : "2022-06-30 10:33:36 -0500",
-      "content"     : "My work"
+      "content"     : "      "
     } 
   
 ]

@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "Ajax with jQuery - Example 01"
+date:   2022-06-30 21:03:36 +0530
+categories: Javascript
+permalink: "/jquery-exampe01"
+--- 
+<form id="userForm">
+  <input type="text" name="username" placeholder="Enter gitHub User name">
+  <input type="submit" value="Search">
+</form>
+<!-- the result of the search will be rendered inside this div -->
+<div id="post-request"></div>
+<div id="result"></div>
+ 
+<script>
+// Attach a submit handler to the form
+$( "#userForm" ).submit(function( event ) {
+  var data 
+  // Stop form from submitting normally
+  event.preventDefault();
+ 
+  // Get some values from elements on the page:
+  var $form = $( this ),
+    username = $form.find( "input[name='username']" ).val(),
+    url = "https://api.github.com/users/"+username+"/repos";
+ 
+	$( "#post-request" ).append("GET Request sent<br><br>");
+
+	//Ajax Function to send a get request
+	$.ajax({
+		url: url,
+		dataType: 'json',
+		context: document.body,
+		async:false
+		})
+		.done(function( data ) {
+			if ( console && console.log ) {
+			console.log( "Sample of data:", data );
+			for (var i in data) {
+                    var row = $('<tr>');
+					row.append($('<td id=' + data[i].name + '>').html(data[i].name));
+					row.append($('<td id=' + data[i].url + '>').html(data[i].url));
+                    $('</tr34>');
+                    $('#result').append(row);
+                }
+			}
+		});
+
+});
+</script>
+ 

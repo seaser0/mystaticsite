@@ -6,7 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
-<title>Integrating razorpay into your app</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/assets/js/customJQ.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Integrating razorpay into your app | My Static Website</title>
 <meta name="generator" content="Jekyll v4.2.2" />
@@ -28,8 +30,6 @@
 
 
 <script type="text/javascript" src="/assets/js/darkmode.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 </head><body>
   <main class="container">
@@ -58,7 +58,7 @@
         <ul>
           
           <li>
-            <a href="/my-work">My Work</a>
+            <a href="/jquery-exampe01">jQuery</a>
           </li>
           
           <li>
@@ -82,14 +82,7 @@
       </div>
     </section>
     <section class="content">
-      <div class="post-container">
-  <a class="post-link" href="/">
-    <h2 class="post-title">Integrating razorpay into your app</h2>
-  </a>
-  <div class="post-meta">
-    <div class="post-date"><i class="icon-calendar"></i>23.Mar.2019</div><ul class="post-categories"><li>Javascript NodeJS</li></ul></div>
-  <div class="post">
-    <p>This is my update number 3! Enjoy!</p>
+      <h1 class="page-heading">Integrating razorpay into your app</h1><p>This is my update number 3! Enjoy!</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Razorpay</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">razorpay</span><span class="dl">'</span><span class="p">);</span>
 
@@ -106,18 +99,97 @@
 </code></pre></div></div>
 <p>List with posts:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>My update - /news/2022/06/30/update.html
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ajax with Chart JS - Example 01 - /chart-js-exampe01&lt;br&gt;
 
-My resume - /resume
+My update - /news/2022/06/30/update.html&lt;br&gt;
 
-My work - /my-work
+My resume - /resume&lt;br&gt;
+
+Ajax with jQuery - Example 01 - /jquery-exampe01&lt;br&gt;
 </code></pre></div></div>
 
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
+<ul class="posts">
+    <li class="posts-labelgroup" id="posts-labelgroup">
+      <h1 id="posts-label">posts</h1>
+      
+      <div class="search-container">
+        <div class="search-section">
+          <i class="icon-search"></i>
+          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
+        </div>
+        <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
+      </div>
+      
+    </li><li><a class="post-link" href="/chart-js-exampe01">
+          <h2 class="post-title">Ajax with Chart JS - Example 01</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            10.Jul.2022
+          </div><ul class="post-categories"><li>Javascript</li></ul></div>
+        <div class="post"><h1>Chart JS</h1>
+<div id="result" heigh="80%">
+	<canvas id="chart" width="200" height="75"></canvas>
+	<script src="/assets/js/customChart.js"></script>
+</div>
+</div>
+      </li><li><a class="post-link" href="/news/2022/06/30/update.html">
+          <h2 class="post-title">My update</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            30.Jun.2022
+          </div><ul class="post-categories"><li>News</li></ul></div>
+        <div class="post"><p>This is the update page.</p>
+</div>
+      </li><li><a class="post-link" href="/resume">
+          <h2 class="post-title">My resume</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            30.Jun.2022
+          </div><ul class="post-categories"><li>Javascript</li><li>NodeJS</li></ul></div>
+        <div class="post"><p>This is my resume.</p>
+</div>
+      </li><li><a class="post-link" href="/jquery-exampe01">
+          <h2 class="post-title">Ajax with jQuery - Example 01</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            30.Jun.2022
+          </div><ul class="post-categories"><li>Javascript</li></ul></div>
+        <div class="post"><form id="userForm">
+  <input type="text" name="username" placeholder="Enter gitHub User name">
+  <input type="submit" value="Search">
+</form>
+<!-- the result of the search will be rendered inside this div -->
+<div id="post-request"></div>
+<div id="result"></div>
+ 
+<script>
+// Attach a submit handler to the form
+$( "#userForm" ).submit(function( event ) {
+  var data 
+  // Stop form from submitting normally
+  event.preventDefault();
+ 
+  // Get some values from elements on the page:
+  var $form = $( this ),
+    username = $form.find( "input[name='username']" ).val(),
+    url = "https://api.github.com/users/"+username+"/repos";
+ 
+	$( "#post-request" ).append("GET Request sent<br><br>");</div>
+      </li></ul>
 
-  </div></div>
-
+  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
+		<use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+	</svg><a href="/feed.xml">Subscribe</a></p> -->
     </section>
     <footer class="condensed">
       <ul class="social about-footer condensed"><a href="https://github.com/seaser0" target="_blank">
@@ -132,7 +204,7 @@ My work - /my-work
         <ul>
           
           <li>
-            <a href="/my-work">My Work</a>
+            <a href="/jquery-exampe01">jQuery</a>
           </li>
           
           <li>
