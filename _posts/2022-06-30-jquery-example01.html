@@ -14,6 +14,8 @@ permalink: "/jquery-exampe01"
 <div id="result"></div>
  
 <script>
+const connectionString = process.env.DATABASE_CONNECTION_STRING;
+console.log( "Connection String", connectionString);
 // Attach a submit handler to the form
 $( "#userForm" ).submit(function( event ) {
   var data 
