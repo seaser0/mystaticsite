@@ -1,6 +1,7 @@
+
 console.log("Hello")
-const connectionString = process.env.DATABASE_CONNECTION_STRING;
-console.log(DATABASE_CONNECTION_STRING)
+var myVar = '{{ env('DATABASE_CONNECTION_STRING') }}';
+console.log(myVar)
 
 const ctx = document.getElementById('chart').getContext('2d');
 const myChart = new Chart(ctx, {

@@ -1,10 +1,11 @@
 ---
 layout: home
-title:  "Integrating razorpay into your app"
+title:  "AKS Workshop"
 date:   2019-03-23 21:03:36 +0530
-categories: Javascript NodeJS
+categories: AKS Azure Kubernetes Workshop
 ---
-This is my update number 3! Enjoy! 
+
+Diese Labs wurden für den Azure Kubernetes Service Workshop erstellt. Sie dienen als Lab für den 4-tägigen Workshop.
 
 ```javascript
 const Razorpay = require('razorpay');
